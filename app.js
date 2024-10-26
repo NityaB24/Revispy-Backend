@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const ConnectToDatabase = require("./config/db-connection");
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
 
+ConnectToDatabase();
 
-app.listen(4000, () => console.log('Server running on port 4000'));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
