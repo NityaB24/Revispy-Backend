@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const ConnectToDatabase = require("./config/db-connection");
+const userRoutes = require('./routes/user');
 require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/users", userRoutes);
 
 ConnectToDatabase();
 
