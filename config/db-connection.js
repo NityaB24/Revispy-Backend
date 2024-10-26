@@ -1,4 +1,3 @@
-// db.js
 const mongoose = require("mongoose");
 const ConnectToDatabase = async () => {
   try {
