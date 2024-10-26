@@ -1,5 +1,5 @@
 const {faker} = require('@faker-js/faker');
-const Category = require('../models/category');
+const Category = require('../models/categoryModel');
 
 async function loadCategories() {
   await Category.deleteMany({});

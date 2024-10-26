@@ -1,5 +1,5 @@
-const Category = require('../models/category');
-const User = require('../models/user');
+const Category = require('../models/categoryModel');
+const User = require('../models/userModel');
 require('dotenv').config();
 
 exports.category = async (req, res) => {

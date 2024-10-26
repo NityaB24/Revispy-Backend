@@ -1,6 +1,5 @@
-const User = require("../models/user");
+const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const { generateToken } = require("../utils/generateToken");
 const transporter = require("../config/nodemailer");
 require('dotenv').config();
